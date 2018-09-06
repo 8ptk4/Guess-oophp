@@ -6,6 +6,14 @@
     <title><?= $title ?></title>
 </head>
 <body>
+    <header>
+        <ul class="nav-container">
+            <li class="nav-item"><a href="index_get.php">GET</a></li>
+            <li class="nav-item"><a href="index_post.php">POST</a></li>
+            <li class="nav-item"><a href="index_session.php">SESSION</a></li>
+        </ul>
+    </header>
+    
     <section class="content">
 
         <h1><?= $title ?></h1>
