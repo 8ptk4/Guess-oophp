@@ -13,7 +13,7 @@
             <li class="nav-item"><a href="index_session.php">SESSION</a></li>
         </ul>
     </header>
-    
+
     <section class="content">
 
         <h1><?= $title ?></h1>
@@ -27,14 +27,13 @@
 
                 <p>Guess a number between 1 and 100</p>
 
-                <input type="text" name="guess" onfocus="this.value=''" value="<?= $guess ?>" autofocus>
+                <input type="text" name="guess" onfocus="this.value=''" value="<?= $_SESSION["guess"] ?>" autofocus>
                 <input type="submit" name="doGuess" value="Guess number">
                 <input type="submit" name="doCheat" value="Cheat">
                 <input type="submit" name="doReset" value="New game">
 
                 <div class="information">
                     <p><?= $_SESSION["display"] ?></p>
-
 
                     <?php if (isset($_POST["doCheat"])) : ?>
                         <p>Cheat: <?= $_SESSION["game"]->number(); ?></p>

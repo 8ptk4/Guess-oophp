@@ -81,8 +81,12 @@ class Guess
      */
     public function makeGuess($number)
     {
-        if ($number < 1 || $number > 100) {
-            throw new GuessException("Your guess is out of bounds.");
+        try {
+            if ($number < 1 || $number > 100) {
+                throw new GuessException("Your guess is out of bounds.");
+            }
+        } catch (GuessException $e) {
+            return "Error: " . $e->getMessage();
         }
 
         if ($this->tries > 0) {
